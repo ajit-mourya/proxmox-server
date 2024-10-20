@@ -18,4 +18,24 @@ sudo apt autoclean
 
 echo "System update completed!"
 
+# Check if NVIDIA driver is installed
+if command -v nvidia-smi &> /dev/null; then
+    echo "NVIDIA drivers are already installed."
+    nvidia-smi
+else
+    echo "NVIDIA drivers are not installed. Installing..."
+    
+    # Install the recommended NVIDIA driver
+    sudo apt install -y nvidia-driver-$(ubuntu-drivers devices | grep -oP 'recommended driver: \K[^\s]+')
+
+    # Check if the installation was successful
+    if command -v nvidia-smi &> /dev/null; then
+        echo "NVIDIA drivers have been installed successfully."
+        nvidia-smi
+    else
+        echo "Failed to install NVIDIA drivers. Please check for errors."
+    fi
+fi
+
+
 ```
