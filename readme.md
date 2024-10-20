@@ -26,7 +26,7 @@ else
     echo "NVIDIA drivers are not installed. Installing..."
     
     # Install the recommended NVIDIA driver
-    sudo apt install -y nvidia-driver-$(ubuntu-drivers devices | grep -oP 'recommended driver: \K[^\s]+')
+    sudo apt install -y $(ubuntu-drivers devices | grep 'recommended' | awk '{print $3}')
 
     # Check if the installation was successful
     if command -v nvidia-smi &> /dev/null; then
