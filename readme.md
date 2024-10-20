@@ -42,7 +42,9 @@ KIOSKSPACE=$(pwd)
 
 echo "----install helpful tools: START----"
 #sudo apt install openssh-server -y
-sudo apt-get install fuse -y
+#sudo apt-get install fuse -y
+sudo add-apt-repository universe
+sudo apt install libfuse2
 echo "----install helpful tools: END----"
 
 echo "----remove pre-install software: START----"
