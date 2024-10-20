@@ -240,4 +240,5 @@ file name: koisk_system.sh
 
 $(whoami)/.app/app.AppImage &
 sleep 1
-wmctrl -r :ACTIVE: -b toggle,fullscreen```
+wmctrl -r :ACTIVE: -b toggle,fullscreen
+```
