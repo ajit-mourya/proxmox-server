@@ -42,6 +42,7 @@ KIOSKSPACE=$(pwd)
 
 echo "----install helpful tools: START----"
 #sudo apt install openssh-server -y
+sudo apt-get install fuse -y
 echo "----install helpful tools: END----"
 
 echo "----remove pre-install software: START----"
@@ -56,6 +57,7 @@ echo "----Setting Up Application: START----"
 mkdir -p ~/.app
 #cp $KIOSKSPACE/app/app.AppImage ~/.app/
 cp $KIOSKSPACE/app/koisk_system.sh ~/.app/
+cp $KIOSKSPACE/app/app.AppImage ~/.app/
 #cp $KIOSKSPACE/image/app-logo.png ~/.app/
 rm -rf app.desktop
 touch app.desktop
@@ -73,7 +75,7 @@ Exec=/home/$USER/.app/koisk_system.sh
 Name=Artem Viewer
 #Icon=/home/$USER/.app/app-logo.png
 EOF
-# chmod +x ~/.app/app.AppImage
+chmod +x ~/.app/app.AppImage
 chmod +x ~/.app/koisk_system.sh
 chmod +x app.desktop
 gio set app.desktop "metadata::trusted" yes
