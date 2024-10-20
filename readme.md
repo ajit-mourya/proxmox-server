@@ -37,5 +37,8 @@ else
     fi
 fi
 
+KIOSKSPACE=$(pwd)
+
+
 
 ```
