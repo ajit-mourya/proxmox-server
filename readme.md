@@ -221,6 +221,15 @@ sudo passwd -d $USER
 seahorse # delete keyrings password
 echo "----system configuration: END----"
 
+
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 1
+gsettings set org.gnome.mutter workspaces-only-on-primary true
+gsettings set org.gnome.desktop.wm.preferences dynamic-workspaces false
+gsettings set org.gnome.desktop.wm.preferences button-layout ':close'
+
+sudo apt install wmctrl
+gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-button false
+
 ```
 
 
@@ -229,6 +238,6 @@ file name: koisk_system.sh
 ```sh
 #!/bin/bash
 
-
-
-```
+$(whoami)/.app/app.AppImage &
+sleep 1
+wmctrl -r :ACTIVE: -b toggle,fullscreen```
