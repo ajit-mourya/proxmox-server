@@ -244,3 +244,13 @@ $(whoami)/.app/app.AppImage &
 sleep 1
 wmctrl -r :ACTIVE: -b toggle,fullscreen
 ```
+
+
+```sh
+
+https://extensions.gnome.org/extension/4099/no-overview/
+https://extensions.gnome.org/extension/6358/disable-workspace-switcher-overlay/
+https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/
+
+```
+
