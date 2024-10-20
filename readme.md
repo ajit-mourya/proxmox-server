@@ -73,7 +73,8 @@ Exec=/home/$USER/.app/koisk_system.sh
 Name=Artem Viewer
 #Icon=/home/$USER/.app/app-logo.png
 EOF
-chmod +x ~/.app/app.AppImage
+# chmod +x ~/.app/app.AppImage
+chmod +x ~/.app/koisk_system.sh
 chmod +x app.desktop
 gio set app.desktop "metadata::trusted" yes
 echo "----Setting Up Application: END---"
