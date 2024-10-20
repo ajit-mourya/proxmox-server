@@ -248,9 +248,14 @@ wmctrl -r :ACTIVE: -b toggle,fullscreen
 
 ```sh
 
+sudo apt install gnome-tweaks
+sudo apt install gnome-shell-extensions
+sudo apt install gnome-shell-extension-manager
+
 https://extensions.gnome.org/extension/4099/no-overview/
 https://extensions.gnome.org/extension/6358/disable-workspace-switcher-overlay/
 https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/
+https://extensions.gnome.org/extension/545/hide-top-bar/
 
 ```
 
