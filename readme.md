@@ -224,8 +224,10 @@ echo "----system configuration: END----"
 
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 1
 gsettings set org.gnome.mutter workspaces-only-on-primary true
+gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences button-layout ':close'
+gsettings set org.gnome.shell.window-switcher current-workspace-only true
 
 sudo apt install wmctrl
 gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-button false
